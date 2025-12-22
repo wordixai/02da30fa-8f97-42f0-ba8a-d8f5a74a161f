@@ -4,31 +4,31 @@ import TrailCard from "../components/TrailCard";
 import { Link } from "react-router-dom";
 
 const featuredTrails = [
-  {
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
-    name: "黄山西海大峡谷",
-    location: "安徽黄山",
-    distance: "12.5",
-    duration: "5-6小时",
-    difficulty: "medium" as const,
-    elevation: "890",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800",
-    name: "张家界金鞭溪",
-    location: "湖南张家界",
-    distance: "8.2",
-    duration: "3-4小时",
-    difficulty: "easy" as const,
-    elevation: "320",
-  },
-];
+{
+  image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+  name: "黄山西海大峡谷",
+  location: "安徽黄山",
+  distance: "12.5",
+  duration: "5-6小时",
+  difficulty: "medium" as const,
+  elevation: "890"
+},
+{
+  image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800",
+  name: "张家界金鞭溪",
+  location: "湖南张家界",
+  distance: "8.2",
+  duration: "3-4小时",
+  difficulty: "easy" as const,
+  elevation: "320"
+}];
+
 
 const quickActions = [
-  { icon: Map, label: "探索路线", path: "/map", color: "bg-primary" },
-  { icon: Users, label: "加入组队", path: "/teams", color: "bg-secondary" },
-  { icon: Compass, label: "创建计划", path: "/plans", color: "bg-accent" },
-];
+{ icon: Map, label: "探索路线", path: "/map", color: "bg-primary" },
+{ icon: Users, label: "加入组队", path: "/teams", color: "bg-secondary" },
+{ icon: Compass, label: "创建计划", path: "/plans", color: "bg-accent" }];
+
 
 export default function Index() {
   return (
@@ -38,7 +38,7 @@ export default function Index() {
         <div className="flex items-center justify-between mb-6">
           <div>
             <p className="text-muted-foreground text-sm">欢迎回来</p>
-            <h1 className="text-2xl font-bold text-foreground">发现精彩徒步</h1>
+            <h1 className='text-foreground text-2xl font-bold'>发现精彩徒步-享受美妙旅途</h1>
           </div>
           <div className="w-10 h-10 rounded-full bg-nature flex items-center justify-center">
             <Mountain className="w-5 h-5 text-primary-foreground" />
@@ -51,26 +51,26 @@ export default function Index() {
           <input
             type="text"
             placeholder="搜索徒步路线、地点..."
-            className="w-full bg-card rounded-xl py-3.5 pl-12 pr-4 text-foreground placeholder:text-muted-foreground shadow-card focus:outline-none focus:ring-2 focus:ring-primary/30"
-          />
+            className="w-full bg-card rounded-xl py-3.5 pl-12 pr-4 text-foreground placeholder:text-muted-foreground shadow-card focus:outline-none focus:ring-2 focus:ring-primary/30" />
+
         </div>
       </div>
 
       <div className="px-5 -mt-2">
         {/* Quick Actions */}
         <div className="grid grid-cols-3 gap-3 mb-8">
-          {quickActions.map((action) => (
-            <Link
-              key={action.path}
-              to={action.path}
-              className="bg-card rounded-xl p-4 shadow-card card-hover flex flex-col items-center gap-2"
-            >
+          {quickActions.map((action) =>
+          <Link
+            key={action.path}
+            to={action.path}
+            className="bg-card rounded-xl p-4 shadow-card card-hover flex flex-col items-center gap-2">
+
               <div className={`w-12 h-12 rounded-xl ${action.color} flex items-center justify-center`}>
                 <action.icon className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="text-sm font-medium text-foreground">{action.label}</span>
             </Link>
-          ))}
+          )}
         </div>
 
         {/* Stats */}
@@ -101,14 +101,14 @@ export default function Index() {
             </Link>
           </div>
           <div className="space-y-4">
-            {featuredTrails.map((trail) => (
-              <TrailCard key={trail.name} {...trail} />
-            ))}
+            {featuredTrails.map((trail) =>
+            <TrailCard key={trail.name} {...trail} />
+            )}
           </div>
         </div>
       </div>
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 }
