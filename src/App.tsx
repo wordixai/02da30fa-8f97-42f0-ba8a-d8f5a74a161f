@@ -7,6 +7,7 @@ import MapPage from "./pages/MapPage";
 import TeamsPage from "./pages/TeamsPage";
 import PlansPage from "./pages/PlansPage";
 import CommunityPage from "./pages/CommunityPage";
+import { Toaster } from "./components/ui/toaster";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Toaster />
   </QueryClientProvider>
 );
 

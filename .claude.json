@@ -7,9 +7,25 @@
     "tengu_prompt_suggestion": true,
     "tengu_ant_attribution_header_new": true
   },
+  "cachedDynamicConfigs": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    }
+  },
+  "cachedGrowthBookFeatures": {
+    "strawberry_granite_flag": "OFF",
+    "persimmon_marble_flag": "OFF"
+  },
   "userID": "45046cd84126ba6a8db7b6c3ba3881fa0da70169d95a209070b43058c9df8515",
   "firstStartTime": "2025-12-22T15:21:43.250Z",
   "sonnet45MigrationComplete": true,
   "opus45MigrationComplete": true,
-  "thinkingMigrationComplete": true
+  "thinkingMigrationComplete": true,
+  "githubRepoPaths": {
+    "wordixai/02da30fa-8f97-42f0-ba8a-d8f5a74a161f": [
+      "/app"
+    ]
+  }
 }
