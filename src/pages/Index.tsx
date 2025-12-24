@@ -25,9 +25,9 @@ const featuredTrails = [
 
 
 const quickActions = [
-{ icon: Map, label: "探索路线", path: "/map", color: "bg-primary" },
-{ icon: Users, label: "加入组队", path: "/teams", color: "bg-secondary" },
-{ icon: Compass, label: "创建计划", path: "/plans", color: "bg-accent" }];
+{ icon: Map, label: "探索路线", path: "/map", color: "bg-primary", bgColor: "bg-primary/10" },
+{ icon: Users, label: "加入组队", path: "/teams", color: "bg-secondary", bgColor: "bg-secondary/10" },
+{ icon: Compass, label: "创建计划", path: "/plans", color: "bg-accent", bgColor: "bg-accent/10" }];
 
 
 export default function Index() {
@@ -63,7 +63,7 @@ export default function Index() {
           <Link
             key={action.path}
             to={action.path}
-            className="bg-card rounded-xl p-4 shadow-card card-hover flex flex-col items-center gap-2">
+            className={`${action.bgColor} rounded-xl p-4 shadow-card card-hover flex flex-col items-center gap-2 border border-border/30`}>
 
               <div className={`w-12 h-12 rounded-xl ${action.color} flex items-center justify-center`}>
                 <action.icon className="w-6 h-6 text-primary-foreground" />

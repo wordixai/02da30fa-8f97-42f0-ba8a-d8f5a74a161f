@@ -15,7 +15,8 @@
     }
   },
   "cachedGrowthBookFeatures": {
-    "strawberry_granite_flag": "OFF"
+    "strawberry_granite_flag": "OFF",
+    "persimmon_marble_flag": "OFF"
   },
   "userID": "45046cd84126ba6a8db7b6c3ba3881fa0da70169d95a209070b43058c9df8515",
   "firstStartTime": "2025-12-22T15:21:43.250Z",
