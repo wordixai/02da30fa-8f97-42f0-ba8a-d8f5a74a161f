@@ -37,7 +37,7 @@ export default function Index() {
       <div className="bg-hero pt-12 pb-8 px-5">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className='text-muted-foreground text-sm'>欢迎回来welco</p>
+            <p className='text-muted-foreground text-sm'>欢迎回来</p>
             <h1 className='text-foreground text-2xl font-bold'>发现精彩徒步-旅途</h1>
           </div>
           <div className="w-10 h-10 rounded-full bg-nature flex items-center justify-center">
